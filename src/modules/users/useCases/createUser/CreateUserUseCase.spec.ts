@@ -23,7 +23,7 @@ describe("Create a new user", ()=> {
     });
 
     it("should not be be able to create a new user with an existing email", async ()=> {
-       expect(async ()=> {
+       await expect(async ()=> {
         await createUserUseCase.execute({
             name: "John Tomato",
             email: "johntomato@example.com",
